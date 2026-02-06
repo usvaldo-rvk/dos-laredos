@@ -1,0 +1,16 @@
+{
+  "name": "DOS LAREDOS - Sistema WMS",
+  "short_name": "DOS LAREDOS",
+  "description": "Sistema de gestión de almacén para Distribuidora Dos Laredos",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

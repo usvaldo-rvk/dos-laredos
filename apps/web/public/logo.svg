@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+                    <rect width="300" height="200" fill="#1a1a1a"/>
+                    <!-- Pilar Izquierdo -->
+                    <rect x="80" y="40" width="18" height="55" rx="3" fill="#ffffff"/>
+                    <!-- Pilar Derecho -->
+                    <rect x="202" y="40" width="18" height="55" rx="3" fill="#ffffff"/>
+                    <!-- Arco -->
+                    <path d="M 89,40 Q 150,15 211,40" stroke="#D4A04C" stroke-width="6" fill="none" stroke-linecap="round"/>
+                    <!-- Texto DOS LAREDOS -->
+                    <text x="150" y="130" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#ffffff">DOS LAREDOS</text>
+                    <!-- Texto DISTRIBUIDORA -->
+                    <text x="150" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#D4A04C" letter-spacing="3">DISTRIBUIDORA</text>
+                </svg>

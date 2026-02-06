@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150">
+                    <!-- Pilar Izquierdo -->
+                    <rect x="40" y="40" width="25" height="80" rx="4" fill="#1a1a1a"/>
+                    <!-- Pilar Derecho -->
+                    <rect x="135" y="40" width="25" height="80" rx="4" fill="#1a1a1a"/>
+                    <!-- Arco -->
+                    <path d="M 52.5,40 Q 100,10 147.5,40" stroke="#D4A04C" stroke-width="9" fill="none" stroke-linecap="round"/>
+                </svg>
