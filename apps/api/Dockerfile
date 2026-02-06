@@ -1,19 +1,13 @@
-# Build stage
-FROM node:20-alpine AS builder
+# Build stage - usar imagen completa de Node (mejor soporte para módulos nativos)
+FROM node:20 AS builder
 
 WORKDIR /app
-
-# Instalar dependencias del sistema para sharp y otras librerías nativas
-RUN apk add --no-cache python3 make g++ vips-dev pkgconfig
-
-# Instalar node-gyp globalmente
-RUN npm install -g node-gyp
 
 # Copiar archivos de dependencias
 COPY package*.json ./
 COPY prisma ./prisma/
 
-# Instalar TODAS las dependencias
+# Instalar dependencias
 RUN npm install
 
 # Generar cliente de Prisma
@@ -25,13 +19,15 @@ COPY . .
 # Compilar TypeScript (ignorar errores de tipo)
 RUN npm run build || true
 
-# Production stage
-FROM node:20-alpine
+# Production stage - imagen más pequeña
+FROM node:20-slim
 
 WORKDIR /app
 
-# Instalar solo vips para runtime (sharp ya está compilado)
-RUN apk add --no-cache vips
+# Instalar libvips para sharp
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libvips42 \
+    && rm -rf /var/lib/apt/lists/*
 
 # Copiar node_modules del builder (incluye sharp compilado)
 COPY --from=builder /app/node_modules ./node_modules
